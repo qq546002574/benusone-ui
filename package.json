@@ -1,12 +1,12 @@
 {
   "name": "@benusone/benusone-ui",
   "description": "Love learning",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "author": "shuaihu",
   "license": "MIT",
   "private": false,
   "main": "dist/benusone-ui.min.js",
-  "git repository": "https://github.com/qq546002574/benusone-ui.git",
+  "repository": "https://github.com/qq546002574/benusone-ui.git",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
