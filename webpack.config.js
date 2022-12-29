@@ -51,12 +51,16 @@ module.exports = {
                 options: {
                     name: '[name].[ext]?[hash]'
                 }
+            }, {
+                test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+                loader: 'file-loader'
             }
         ]
     },
     resolve: {
         alias: {
-            'vue$': 'vue/dist/vue.esm.js'
+            'vue$': 'vue/dist/vue.esm.js',
+            '@': path.resolve('src'),
         },
         extensions: ['*', '.js', '.vue', '.json']
     },
