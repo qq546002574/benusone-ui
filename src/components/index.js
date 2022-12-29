@@ -10,6 +10,7 @@ const components = {
         Vue.component('bsCarousel', bsCarousel);
         Vue.component('bsCarouselItem', bsCarouselItem);
         Vue.component('bsCascader', bsCascader);
+        Vue.component('bsBaseForm', bsBaseForm);
     }
 }
 // CarouselItem.install = Vue => Vue.component(CarouselItem.name, CarouselItem);//注册组件
