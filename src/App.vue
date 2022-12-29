@@ -14,6 +14,7 @@
       v-on="{ ...onChange }"
       v-bind="{ ...cascaderProps }"
     ></bs-cascader>
+    <bsBaseForm ref="searchForm" :config="searchConfig" />
   </div>
 </template>
 
@@ -21,6 +22,8 @@
 import bsCarousel from "@/components/carousel"; // 引入
 import bsCarouselItem from "@/components/carouselItem"; // 引入
 import bsCascader from "@/components/cascader"; // 引入
+import bsBaseForm from "@/components/baseForm"; // 引入
+
 import { testArr } from "@/test/test.js";
 export default {
   components: {
@@ -28,6 +31,7 @@ export default {
     bsCarousel,
     bsCarouselItem,
     bsCascader,
+    bsBaseForm
   },
   name: "app",
   data() {
@@ -43,6 +47,48 @@ export default {
         collapseTags: true,
         options: testArr,
         filterable: true,
+      },
+      searchConfig: {
+        colNum: 6,
+        props: { "label-width": "100px" },
+        formItem: {
+          key0: {
+            props: { label: "字段1" },
+            items: [
+              {
+                type: "input",
+                props: { placeholder: "字段1", clearable: true },
+              },
+            ],
+          },
+          key1: {
+            props: { label: "字段1" },
+            items: [
+              {
+                dictName: true,
+                type: "select",
+                props: { placeholder: "全部", clearable: true },
+                options: {
+                  data: [],
+                },
+              },
+            ],
+          },
+          operateDate: {
+            props: { label: "日期" },
+            items: [
+              {
+                type: "daterange",
+                props: {
+                  startPlaceholder: "开始日期",
+                  endPlaceholder: "结束日期",
+                  clearable: true,
+                  style: { width: "100% !important", display: "flex" },
+                },
+              },
+            ],
+          },
+        },
       },
     };
   },

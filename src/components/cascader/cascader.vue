@@ -641,7 +641,6 @@ export default {
   },
 }
 </script>
-  
   <style>
   .hide-popper {
     display: none;
