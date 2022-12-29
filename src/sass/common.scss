@@ -1,0 +1,169 @@
+// 宽高
+.full {
+  height: 100%;
+  width: 100%;
+}
+.full-width {
+  width: 100%;
+}
+.full-height {
+  height: 100%;
+}
+
+// display
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1 1 auto;
+}
+.flex-y-center {
+  display: flex;
+  align-items: center;
+}
+// 文本
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+// 边距
+@for $i from 0 through 10 {
+  // padding
+  .pd#{$i}0 {
+    padding: (10px * $i) !important;
+  }
+  .pt#{$i}0 {
+    padding-top: (10px * $i);
+  }
+  .pb#{$i}0 {
+    padding-bottom: (10px * $i) !important;
+  }
+  .pl#{$i}0 {
+    padding-left: (10px * $i);
+  }
+  .pr#{$i}0 {
+    padding-right: (10px * $i);
+  }
+  .all-p-#{$i}0 {
+    padding: (10px * $i);
+  }
+  // margin
+  .m#{$i}0 {
+    margin: (10px * $i);
+  }
+  .mt#{$i} {
+    margin-top: (1px * $i);
+  }
+  .mt#{$i}0 {
+    margin-top: (10px * $i);
+  }
+  .mb#{$i}0 {
+    margin-bottom: (10px * $i);
+  }
+  .ml#{$i}0 {
+    margin-left: (10px * $i);
+  }
+  .mr#{$i}0 {
+    margin-right: (10px * $i);
+  }
+  .all-m-#{$i} {
+    margin: (1px * $i);
+  }
+}
+@for $i from 0 through 48 {
+  .font#{$i} {
+    font-size: #{$i}px;
+  }
+  // line-height
+  .lh#{$i} {
+    line-height: (1px * $i);
+  }
+  .mt#{$i} {
+    margin-top: (1px * $i);
+  }
+  .mr#{$i} {
+    margin-right: (1px * $i);
+  }
+  .mb#{$i} {
+    margin-bottom: (1px * $i);
+  }
+  .ml#{$i} {
+    margin-left: (1px * $i);
+  }
+}
+.font12 {
+  font-size: 12px;
+}
+.font14 {
+  font-size: 14px;
+}
+.font16 {
+  font-size: 16px;
+}
+.font18 {
+  font-size: 18px;
+}
+.font20 {
+  font-size: 20px;
+}
+.inline-block {
+  display: inline-block;
+}
+// float
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+// bg
+.bgfff {
+  background-color: #fff;
+}
+
+.colorfff {
+  color: #fff;
+}
+
+.color333 {
+  color: #333;
+}
+
+.color999 {
+  color: #999;
+}
+
+.color666 {
+  color: #666;
+}
+
+.table-empty {
+  margin-top: 10px;
+}
+
+.validation-error {
+  .el-input__inner, .el-form-item.is-error .el-input__inner:focus, .el-form-item.is-error .el-textarea__inner, .el-form-item.is-error .el-textarea__inner:focus, .el-textarea__inner {
+    border-color: #f56c6c !important;
+  }
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #f56c6c;
+  }
+  input::-moz-input-placeholder {
+    color: #f56c6c;
+  }
+  input::-ms-input-placeholder {
+    color: #f56c6c;
+  }
+}

@@ -1,0 +1,206 @@
+.bs-brief-preview-scroll {
+  overflow: hidden;
+  overflow-y: scroll;
+  .bs-brief-preview {
+    padding: 0 120px;
+    .bs-brief-preview-html {
+      font-size: 16px;
+      font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+      line-height: 24px;
+      h2 {
+        color: #00a0ff;
+        margin-top: 30px;
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+      h3 {
+        font-size: 17px;
+        margin-top: 15px;
+      }
+      .info {
+        line-height: 30px;
+      }
+      p {
+        text-indent: 2em;
+        img {
+          display: block;
+          width: 1024px;
+          height: auto;
+          margin: 20px auto;
+          padding-right: 20px;
+        }
+      }
+      iframe {
+        display: block;
+        width: 1024px;
+        height: 100%;
+        margin: 20px auto;
+        padding-right: 20px;
+      }
+    }
+  }
+  .bs-brief-preview-goTop {
+    cursor: pointer;
+    display: block;
+    margin: 0 0 0;
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+    right: 95px;
+    bottom: 190px;
+    height: 54px;
+    width: 54px;
+    z-index: 1111;
+    text-align: center;
+    line-height: 54px;
+    transition: all 1s ease;
+    .bs-brief-preview-goTop-button {
+      background-color: rgba(0, 0, 0, .6);
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+      border-radius: 2px;
+      i {
+        color: #fff;
+        font-size: 30px;
+      }
+    }
+    .bs-brief-preview-goTop-button:hover {
+      background-color: rgba(0, 0, 0, .7);
+    }
+  }
+}
+
+.bs-brief-preview-categories {
+  background-color: #fff;
+  padding: 10px 60px;
+  margin-right: 5px;
+  border: 1px solid #ebeef5;
+  overflow: hidden;
+  overflow-y: scroll;
+  .bs-brief-preview-html {
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    line-height: 28px;
+    h2 {
+      color: #00a0ff;
+      margin-top: 30px;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+    h3 {
+      margin-top: 15px;
+    }
+    .info {
+      line-height: 30px;
+    }
+    p {
+      text-indent: 2em;
+      img {
+        display: block;
+        width: 900px;
+        height: auto;
+        margin: 20px auto;
+        padding-right: 20px;
+      }
+    }
+    iframe {
+      display: block;
+      width: 900px;
+      height: 100%;
+      margin: 20px auto;
+      padding-right: 20px;
+    }
+  }
+  .bs-brief-preview-goTop {
+    cursor: pointer;
+    display: block;
+    margin: 0 0 0;
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+    right: 60px;
+    bottom: 100px;
+    height: 45px;
+    width: 45px;
+    z-index: 1111;
+    text-align: center;
+    line-height: 45px;
+    transition: all 1s ease;
+    .bs-brief-preview-goTop-button {
+      background-color: rgba(0, 0, 0, .6);
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+      border-radius: 2px;
+      i {
+        color: #fff;
+        font-size: 30px;
+      }
+    }
+    .bs-brief-preview-goTop-button:hover {
+      background-color: rgba(0, 0, 0, .7);
+    }
+  }
+  .bs-brief-preview-no-data {
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    font-size: 13px;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    line-height: 20px;
+    text-align: center;
+    color: #909399;
+  }
+}
+
+.bs-brief-preview-close {
+  cursor: pointer;
+  display: block;
+  height: 54px;
+  margin: 0 0 0;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  right: 95px;
+  bottom: 125px;
+  width: 54px;
+  z-index: 1111;
+  text-align: center;
+  line-height: 54px;
+  .bs-brief-preview-close-button {
+    background-color: rgba(0, 0, 0, .6);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    border-radius: 2px;
+    i {
+      color: #fff;
+      font-size: 30px;
+    }
+  }
+  .bs-brief-preview-close-button:hover {
+    background-color: rgba(0, 0, 0, .7);
+  }
+}
+
+.bs-brief-preview-close-remind {
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  right: 179px;
+  bottom: 116px;
+  width: 70px;
+  z-index: 1111;
+  text-align: center;
+  line-height: 70px;
+  background-color: #438ed1;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 15px;
+  .bs-brief-triangle {
+    position: fixed;
+    right: 160px;
+    bottom: 130px;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #438ed1;
+    border-bottom: 20px solid transparent;
+  }
+}
