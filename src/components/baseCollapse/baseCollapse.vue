@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import bsBaseForm from '@/components/baseForm.vue'
+import bsBaseForm from '@/components/baseForm'
 
 export default {
   components: {
