@@ -30,7 +30,7 @@ export const completeDeepClone = function(target, hash = new WeakMap()) {
     return target
   }
   const NewCtor = target.constructor
-  if (target instanceof Boolean || target instanceof Date || target instanceof String || target instanceof Number || target instanceof RegExp) {
+  if (target instanceof Date || target instanceof RegExp) {
     return new NewCtor(target)
   }
   if (target instanceof Error) {
@@ -40,6 +40,7 @@ export const completeDeepClone = function(target, hash = new WeakMap()) {
   if (target instanceof Symbol) {
     return Object(Symbol.prototype.valueOf.call(target))
   }
+  // 基础类型
   if (typeof target !== 'object') {
     return target
   }
