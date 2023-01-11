@@ -15,6 +15,7 @@
       v-bind="{ ...cascaderProps }"
     ></bs-cascader>
     <bsBaseForm ref="searchForm" :config="searchConfig" />
+    <baseQrcode content="https://qq546002574.github.io/#/login"/>
   </div>
 </template>
 
@@ -23,6 +24,7 @@ import bsCarousel from "@/components/carousel"; // 引入
 import bsCarouselItem from "@/components/carouselItem"; // 引入
 import bsCascader from "@/components/cascader"; // 引入
 import bsBaseForm from "@/components/baseForm"; // 引入
+import baseQrcode from "@/components/baseQrcode"; // 引入
 
 import { testArr } from "@/test/test.js";
 export default {
@@ -31,7 +33,8 @@ export default {
     bsCarousel,
     bsCarouselItem,
     bsCascader,
-    bsBaseForm
+    bsBaseForm,
+    baseQrcode
   },
   name: "app",
   data() {

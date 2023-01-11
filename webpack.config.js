@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 // 执行环境
 const NODE_ENV = process.env.NODE_ENV;
 console.log("-----NODE_ENV===",NODE_ENV);
@@ -91,12 +92,13 @@ if (process.env.NODE_ENV === 'production') {
                 NODE_ENV: '"production"'
             }
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: true,
-            compress: {
-                warnings: false
-            }
-        }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     sourceMap: true,
+        //     compress: {
+        //         warnings: false
+        //     }
+        // }),
+        new UglifyJsPlugin(),
         new webpack.LoaderOptionsPlugin({
             minimize: true
         }),
