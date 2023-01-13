@@ -1,4 +1,4 @@
-<<template>
+<template>
   <div :id="uuid">
     <img :src="imgBase64" @load="imgLoad"/>
     <slot />
