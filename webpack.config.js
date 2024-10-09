@@ -3,7 +3,7 @@ var webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 // 执行环境
 const NODE_ENV = process.env.NODE_ENV;
-console.log("-----NODE_ENV===",NODE_ENV);
+console.log("-----NODE_ENV===", NODE_ENV);
 
 module.exports = {
     entry: NODE_ENV == 'development' ? './src/main.js' : "./src/components/index.js",
@@ -58,9 +58,9 @@ module.exports = {
             }, {
                 test: /\.scss$/i,
                 use: [
-                  "style-loader",
-                  "css-loader",
-                  "sass-loader",
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader",
                 ],
             },
         ]
@@ -75,6 +75,7 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         noInfo: true,
+        hot: true,
         overlay: true
     },
     performance: {

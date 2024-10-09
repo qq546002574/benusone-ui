@@ -1,21 +1,6 @@
 <template>
-  <div id="app">
-    <h2>calculate</h2>
-    <!-- <bs-carousel v-model="checkIndex">
-      <bs-carousel-item name="1">
-        <img src="./assets/logo.png" />
-      </bs-carousel-item>
-      <bs-carousel-item name="2">
-        <img src="./assets/logo.png" />
-      </bs-carousel-item>
-    </bs-carousel> -->
-    <bs-cascader
-      v-model="cascader"
-      v-on="{ ...onChange }"
-      v-bind="{ ...cascaderProps }"
-    ></bs-cascader>
-    <bsBaseForm ref="searchForm" :config="searchConfig" />
-    <baseQrcode content="https://qq546002574.github.io/#/login"/>
+  <div id="app" class="flex">
+    <bsBaseQrcode content="https://qq546002574.github.io/" />
   </div>
 </template>
 
@@ -24,9 +9,13 @@ import bsCarousel from "@/components/carousel"; // 引入
 import bsCarouselItem from "@/components/carouselItem"; // 引入
 import bsCascader from "@/components/cascader"; // 引入
 import bsBaseForm from "@/components/baseForm"; // 引入
-import baseQrcode from "@/components/baseQrcode"; // 引入
+import bsBaseQrcode from "@/components/baseQrcode"; // 引入
+import bsCodeEdit from "@/components/codeEdit"; // 引入
+import bsResizableContainer from "@/components/resizableContainer"; // 引入
+import bsCcodeDiff from "@/components/codeDiff";
 
 import { testArr } from "@/test/test.js";
+
 export default {
   components: {
     //注册插件
@@ -34,12 +23,16 @@ export default {
     bsCarouselItem,
     bsCascader,
     bsBaseForm,
-    baseQrcode
+    bsBaseQrcode,
+    bsCodeEdit,
+    bsResizableContainer,
+    bsCcodeDiff,
   },
   name: "app",
   data() {
     return {
       checkIndex: 1,
+      checkIndex2: 2,
       cascader: [],
       cascaderProps: {
         placeholder: "请选择",
@@ -93,10 +86,57 @@ export default {
           },
         },
       },
+      // oldStr: "",
+      // newStr: "",
+      diffCode: "",
+      isJson: false,
+      isXml: false,
     };
   },
+  created() {},
   methods: {
     onChange() {},
+    sleep(time) {
+      // eslint-disable-next-line no-promise-executor-return
+      return new Promise((resolve) => setTimeout(resolve, time));
+    },
+    // 解法一 PromiseAll
+    async handleClick() {
+      Promise.all([
+        this.handleClick2,
+        this.handleClick3,
+        this.handleClick4,
+      ]).then((it) => {
+        console.log("hs ", it[0](), it[1](), it[2](3));
+      });
+      // await this.handleClick2();
+      // console.log('HS', this.checkIndex, this.checkIndex2);
+    },
+    // 这里我用 sleep 提代接口演示
+    // async handleClick() {
+    //     await this.handleClick2();
+    //     console.log('HS', this.checkIndex, this.checkIndex2);
+    // },
+    async handleClick2() {
+      await this.sleep(3000);
+      this.checkIndex = 1;
+      this.checkIndex2 = 1;
+      console.log("HS2", this.checkIndex, this.checkIndex2);
+      // await this.handleClick3();
+    },
+    async handleClick3() {
+      await this.sleep(3000);
+      this.checkIndex = 2;
+      this.checkIndex2 = 2;
+      console.log("HS3", this.checkIndex, this.checkIndex2);
+      // await this.handleClick4(3);
+    },
+    async handleClick4(a) {
+      await this.sleep(3000);
+      this.checkIndex = a;
+      this.checkIndex2 = a;
+      console.log("HS4", this.checkIndex, this.checkIndex2);
+    },
   },
 };
 </script>
@@ -106,7 +146,7 @@ export default {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
   margin-top: 60px;
 }
@@ -128,5 +168,10 @@ li {
 
 a {
   color: #42b983;
+}
+.test {
+  height: 300px;
+  width: 100%;
+  background: #000;
 }
 </style>
